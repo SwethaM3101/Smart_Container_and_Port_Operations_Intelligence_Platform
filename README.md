@@ -705,20 +705,20 @@ PortPulse-Analytics/
 
 ## 1. Page 1 — Executive Overview
 
-<img width="846" height="479" alt="Executive Overview" src="https://github.com/user-attachments/assets/22473560-304c-4a45-8658-a0b506ea981f" />
+<img width="903" height="482" alt="Executive Overview" src="https://github.com/user-attachments/assets/22473560-304c-4a45-8658-a0b506ea981f" />
 
 
 ## 2. Page 2 — Container & Yard Intelligence
 
-<img width="840" height="482" alt="Container and Yard Intelligence" src="https://github.com/user-attachments/assets/52bb05d5-4f73-40a4-bb00-3b1e07df0fcc" />
+<img width="903" height="482" alt="Container and Yard Intelligence" src="https://github.com/user-attachments/assets/52bb05d5-4f73-40a4-bb00-3b1e07df0fcc" />
 
 ## 3. Page 3 — Crane & Truck Operations
 
-<img width="903" height="478" alt="Crane and Truck Operations" src="https://github.com/user-attachments/assets/bbeddd1d-de6f-43e1-95e1-380ba1f595c0" />
+<img width="903" height="482" alt="Crane and Truck Operations" src="https://github.com/user-attachments/assets/bbeddd1d-de6f-43e1-95e1-380ba1f595c0" />
 
 ## 4. Page 4 — Decision Intelligence
 
-<img width="841" height="483" alt="Decision Intelligence" src="https://github.com/user-attachments/assets/d421f715-9a10-4d79-802e-df044d31003a" />
+<img width="903" height="482" alt="Decision Intelligence" src="https://github.com/user-attachments/assets/d421f715-9a10-4d79-802e-df044d31003a" />
 
 ---
 
