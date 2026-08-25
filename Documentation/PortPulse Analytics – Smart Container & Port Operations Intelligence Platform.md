@@ -22,33 +22,33 @@ The project follows a complete analytics workflow:
 
 ## Business Areas Covered
 
-- Container movement and throughput analysis
-- Port and terminal performance
-- Yard capacity and utilization monitoring
-- Container dwell-time analysis
-- Crane utilization and productivity
-- Crane downtime monitoring
-- Truck waiting and processing-time analysis
-- Gate and terminal operations
-- Shipping-line and vessel performance
-- Operational risk and bottleneck identification
-- Decision intelligence and operational recommendations
+* Container movement and throughput analysis
+* Port and terminal performance
+* Yard capacity and utilization monitoring
+* Container dwell-time analysis
+* Crane utilization and productivity
+* Crane downtime monitoring
+* Truck waiting and processing-time analysis
+* Gate and terminal operations
+* Shipping-line and vessel performance
+* Operational risk and bottleneck identification
+* Decision intelligence and operational recommendations
 
 ---
 
 ## Project Objectives
 
-- Build a structured relational database for port operational data.
-- Analyze container movement and throughput performance.
-- Monitor container dwell time and identify long-stay containers.
-- Evaluate yard capacity, occupancy, and utilization.
-- Analyze crane productivity, operating hours, and downtime.
-- Monitor truck waiting and processing times.
-- Compare operational performance across ports, terminals, and shipping lines.
-- Identify operational bottlenecks and high-risk areas.
-- Develop an interactive 4-page Power BI dashboard.
-- Convert operational analytics into actionable decision recommendations.
-- Demonstrate an end-to-end Data Analyst workflow using SQL and Power BI.
+* Build a structured relational database for port operational data.
+* Analyze container movement and throughput performance.
+* Monitor container dwell time and identify long-stay containers.
+* Evaluate yard capacity, occupancy, and utilization.
+* Analyze crane productivity, operating hours, and downtime.
+* Monitor truck waiting and processing times.
+* Compare operational performance across ports, terminals, and shipping lines.
+* Identify operational bottlenecks and high-risk areas.
+* Develop an interactive 4-page Power BI dashboard.
+* Convert operational analytics into actionable decision recommendations.
+* Demonstrate an end-to-end Data Analyst workflow using SQL and Power BI.
 
 ---
 
@@ -60,20 +60,20 @@ Analyzing these operations manually makes it difficult to identify bottlenecks, 
 
 **PortPulse Analytics addresses the following business questions:**
 
-- How many containers are being moved?
-- Which ports and terminals have higher operational activity?
-- Which shipping lines and ships contribute to container movements?
-- What is the average container dwell time?
-- Where are operational bottlenecks occurring?
-- How efficiently are cranes operating?
-- How much crane downtime is occurring?
-- How long are trucks waiting at port gates?
-- Which gates have higher waiting or processing times?
-- How efficiently is yard capacity being utilized?
-- Which yards have high utilization?
-- How many long-stay containers are present?
-- Which operational areas require attention?
-- What actions should management take next?
+* How many containers are being moved?
+* Which ports and terminals have higher operational activity?
+* Which shipping lines and ships contribute to container movements?
+* What is the average container dwell time?
+* Where are operational bottlenecks occurring?
+* How efficiently are cranes operating?
+* How much crane downtime is occurring?
+* How long are trucks waiting at port gates?
+* Which gates have higher waiting or processing times?
+* How efficiently is yard capacity being utilized?
+* Which yards have high utilization?
+* How many long-stay containers are present?
+* Which operational areas require attention?
+* What actions should management take next?
 
 ---
 
@@ -103,13 +103,13 @@ Contains container-level information.
 
 **Key fields include:**
 
-- `Container_ID`
-- `Container_Type`
-- `Size`
-- `Cargo_Category`
-- `Import_Export`
-- `Cargo_Weight_Tons`
-- `Hazardous`
+* `Container_ID`
+* `Container_Type`
+* `Size`
+* `Cargo_Category`
+* `Import_Export`
+* `Cargo_Weight_Tons`
+* `Hazardous`
 
 ### `dim_date`
 
@@ -117,15 +117,15 @@ Contains date and time attributes used for time-based analysis.
 
 **Key fields include:**
 
-- `Date_Record_ID`
-- `Date_Time`
-- `Date`
-- `Day`
-- `Month`
-- `Month_Name`
-- `Quarter`
-- `Year`
-- `Weekday`
+* `Date_Record_ID`
+* `Date_Time`
+* `Date`
+* `Day`
+* `Month`
+* `Month_Name`
+* `Quarter`
+* `Year`
+* `Weekday`
 
 ### `dim_port`
 
@@ -133,13 +133,13 @@ Contains port, terminal, and berth information.
 
 **Key fields include:**
 
-- `Port_Record_ID`
-- `Port_ID`
-- `Port_Name`
-- `Country`
-- `Region`
-- `Terminal`
-- `Berth`
+* `Port_Record_ID`
+* `Port_ID`
+* `Port_Name`
+* `Country`
+* `Region`
+* `Terminal`
+* `Berth`
 
 ### `dim_ship`
 
@@ -147,13 +147,13 @@ Contains vessel and shipping-line information.
 
 **Key fields include:**
 
-- `Ship_Record_ID`
-- `Ship_ID`
-- `Ship_Name`
-- `Shipping_Line`
-- `Ship_Type`
-- `TEU_Capacity`
-- `Flag`
+* `Ship_Record_ID`
+* `Ship_ID`
+* `Ship_Name`
+* `Shipping_Line`
+* `Ship_Type`
+* `TEU_Capacity`
+* `Flag`
 
 ---
 
@@ -165,16 +165,16 @@ Contains operational container movement records.
 
 **Key fields include:**
 
-- `Movement_ID`
-- `Date_Record_ID`
-- `Port_Record_ID`
-- `Ship_Record_ID`
-- `Container_ID`
-- `Movement_Type`
-- `Status`
-- `Movement_Time_Min`
-- `Dwell_Time_Hours`
-- `Customs_Delay_Hours`
+* `Movement_ID`
+* `Date_Record_ID`
+* `Port_Record_ID`
+* `Ship_Record_ID`
+* `Container_ID`
+* `Movement_Type`
+* `Status`
+* `Movement_Time_Min`
+* `Dwell_Time_Hours`
+* `Customs_Delay_Hours`
 
 ### `fact_crane_operation`
 
@@ -182,16 +182,16 @@ Contains crane performance and operational information.
 
 **Key fields include:**
 
-- `Crane_Operation_ID`
-- `Date_Record_ID`
-- `Port_Record_ID`
-- `Ship_Record_ID`
-- `Crane_ID`
-- `Crane_Type`
-- `Operating_Hours`
-- `Downtime_Hours`
-- `Containers_Handled`
-- `Maintenance_Status`
+* `Crane_Operation_ID`
+* `Date_Record_ID`
+* `Port_Record_ID`
+* `Ship_Record_ID`
+* `Crane_ID`
+* `Crane_Type`
+* `Operating_Hours`
+* `Downtime_Hours`
+* `Containers_Handled`
+* `Maintenance_Status`
 
 ### `fact_truck_movement`
 
@@ -199,16 +199,16 @@ Contains truck and gate operational information.
 
 **Key fields include:**
 
-- `Truck_Movement_ID`
-- `Date_Record_ID`
-- `Port_Record_ID`
-- `Container_ID`
-- `Gate_ID`
-- `Truck_Type`
-- `Arrival_Hour`
-- `Waiting_Minutes`
-- `Processing_Minutes`
-- `Gate_Status`
+* `Truck_Movement_ID`
+* `Date_Record_ID`
+* `Port_Record_ID`
+* `Container_ID`
+* `Gate_ID`
+* `Truck_Type`
+* `Arrival_Hour`
+* `Waiting_Minutes`
+* `Processing_Minutes`
+* `Gate_Status`
 
 ### `fact_yard_utilization`
 
@@ -216,17 +216,17 @@ Contains yard capacity and utilization information.
 
 **Key fields include:**
 
-- `Yard_Record_ID`
-- `Date_Record_ID`
-- `Port_Record_ID`
-- `Yard_ID`
-- `Capacity_TEUs`
-- `Occupied_TEUs`
-- `Available_TEUs`
-- `Utilization_Percentage`
-- `Inbound_Containers`
-- `Outbound_Containers`
-- `Long_Stay_Containers`
+* `Yard_Record_ID`
+* `Date_Record_ID`
+* `Port_Record_ID`
+* `Yard_ID`
+* `Capacity_TEUs`
+* `Occupied_TEUs`
+* `Available_TEUs`
+* `Utilization_Percentage`
+* `Inbound_Containers`
+* `Outbound_Containers`
+* `Long_Stay_Containers`
 
 ---
 
@@ -271,15 +271,15 @@ The model allows operational information to be analyzed across:
 
 SQL was used for:
 
-- Database creation
-- Table creation
-- Data validation
-- Data cleaning
-- Joins between operational tables
-- Aggregation analysis
-- KPI preparation
-- Operational performance analysis
-- Bottleneck identification
+* Database creation
+* Table creation
+* Data validation
+* Data cleaning
+* Joins between operational tables
+* Aggregation analysis
+* KPI preparation
+* Operational performance analysis
+* Bottleneck identification
 
 ### Example Database Creation
 
@@ -305,15 +305,15 @@ Data was extracted from the MySQL database.
 
 The transformation process included:
 
-- Checking column names
-- Correcting data types
-- Checking missing values
-- Checking duplicate records
-- Preparing date and time fields
-- Validating categorical fields
-- Preparing operational metrics
-- Creating required classifications
-- Preparing data for analysis
+* Checking column names
+* Correcting data types
+* Checking missing values
+* Checking duplicate records
+* Preparing date and time fields
+* Validating categorical fields
+* Preparing operational metrics
+* Creating required classifications
+* Preparing data for analysis
 
 ## Load
 
@@ -327,40 +327,40 @@ A separate **Measures Table** was created in Power BI to organize the project's 
 
 ## Container Operations
 
-- Total Container Movements
-- Average Movement Time
-- Average Dwell Time
-- Average Customs Delay
+* Total Container Movements
+* Average Movement Time
+* Average Dwell Time
+* Average Customs Delay
 
 ## Crane Operations
 
-- Total Operating Hours
-- Total Downtime Hours
-- Total Containers Handled
-- Crane Utilization %
-- Crane Productivity
+* Total Operating Hours
+* Total Downtime Hours
+* Total Containers Handled
+* Crane Utilization %
+* Crane Productivity
 
 ## Truck Operations
 
-- Average Truck Waiting Time
-- Average Processing Time
-- Total Truck Movements
-- Gate Performance
+* Average Truck Waiting Time
+* Average Processing Time
+* Total Truck Movements
+* Gate Performance
 
 ## Yard Operations
 
-- Total Yard Capacity
-- Occupied TEUs
-- Available TEUs
-- Yard Utilization %
-- Long-Stay Containers
+* Total Yard Capacity
+* Occupied TEUs
+* Available TEUs
+* Yard Utilization %
+* Long-Stay Containers
 
 ## Decision Intelligence
 
-- Operational Risk Score
-- Bottleneck Status
-- High-Risk Operational Areas
-- Recommended Action
+* Operational Risk Score
+* Bottleneck Status
+* High-Risk Operational Areas
+* Recommended Action
 
 ---
 
@@ -390,25 +390,25 @@ Provides a high-level view of overall port operational performance.
 
 ## KPIs
 
-- Total Container Movements
-- Average Dwell Days
-- Yard Utilization %
-- Crane Downtime Hours
-- Container Throughput
+* Total Container Movements
+* Average Dwell Days
+* Yard Utilization %
+* Crane Downtime Hours
+* Container Throughput
 
 ## Visuals
 
-- Container Throughput by Month
-- Container Movements by Shipping Line
-- Crane Downtime by Crane
-- Average Yard Utilization by Yard
+* Container Throughput by Month
+* Container Movements by Shipping Line
+* Crane Downtime by Crane
+* Average Yard Utilization by Yard
 
 ## Slicers
 
-- Date
-- Port
-- Shipping Line
-- Yard
+* Date
+* Port
+* Shipping Line
+* Yard
 
 ---
 
@@ -418,39 +418,39 @@ Focuses on container movement, dwell time, and yard capacity.
 
 ## KPIs
 
-- Total Container Movements
-- Import Containers
-- Yard Utilization %
-- Export Containers
+* Total Container Movements
+* Import Containers
+* Yard Utilization %
+* Export Containers
 
 ## Visuals
 
-- Yard Utilization Heatmap
-- Container Movement Analysis
-- Container Dwell Time by Yard
-- Container Status Distribution
-- Container Distribution by Shipping Line
-- Container Type Distribution
-- Yard-wise Container Distribution (TEUs)
-- Yard Utilization %
+* Yard Utilization Heatmap
+* Container Movement Analysis
+* Container Dwell Time by Yard
+* Container Status Distribution
+* Container Distribution by Shipping Line
+* Container Type Distribution
+* Yard-wise Container Distribution (TEUs)
+* Yard Utilization %
 
 ## Slicers
 
-- Date
-- Port
-- Shipping Line
-- Container Type
-- Yard
+* Date
+* Port
+* Shipping Line
+* Container Type
+* Yard
 
 ## Business Purpose
 
 This page helps identify:
 
-- Yard congestion
-- Capacity constraints
-- Container dwell-time problems
-- High-utilization yards
-- Long-stay container situations
+* Yard congestion
+* Capacity constraints
+* Container dwell-time problems
+* High-utilization yards
+* Long-stay container situations
 
 ---
 
@@ -460,104 +460,85 @@ Analyzes equipment productivity and gate operations.
 
 ## Crane KPIs
 
-- Crane Downtime
-- Crane Utilization %
-- Crane Productivity
+* Crane Downtime
+* Crane Utilization %
+* Crane Productivity
 
 ## Truck KPIs
 
-- Average Movement Time
-- Truck Movements
+* Average Movement Time
+* Truck Movements
 
 ## Visuals
 
-- Crane Utilization Gauge
-- Crane Downtime Analysis
-- Crane Productivity Trend
-- Average Movement Time Trend
-- Truck Gate Status
-- Trucks Served by Terminal
-- Crane Performance by Terminal
+* Crane Utilization Gauge
+* Crane Downtime Analysis
+* Crane Productivity Trend
+* Average Movement Time Trend
+* Truck Gate Status
+* Trucks Served by Terminal
+* Crane Performance by Terminal
 
 ## Slicers
 
-- Date
-- Port
-- Terminal
+* Date
+* Port
+* Terminal
 
 ## Business Purpose
 
 This page helps management identify:
 
-- Equipment inefficiency
-- Crane downtime
-- Crane productivity issues
-- Truck-gate congestion
-- Terminal-level operational performance
+* Equipment inefficiency
+* Crane downtime
+* Crane productivity issues
+* Truck-gate congestion
+* Terminal-level operational performance
 
 ---
 
 # Page 4 — Decision Intelligence
 
-The **Decision Intelligence page** is the strategic layer of the PortPulse Analytics platform.
+The Decision Intelligence page is the strategic and executive advisory layer of the PortPulse Analytics platform. Moving beyond traditional historical reporting ("What happened?"), this page answers:
 
-Its core business question is:
+"Where is the risk?", "Why is it critical?", and "What actionable steps should management execute next?"
 
-> **"What should we do next?"**
+It features fully dynamic, context-aware DAX measures that adapt in real-time based on global slicers (Date Range, Port, and Yard Name).
 
-Rather than only reporting historical performance, this page converts operational indicators into **risk signals, bottleneck alerts, and recommended actions**.
+🚀 Dynamic KPI Cards & Metrics
+Priority Yard: Automatically highlights the critical zone under observation (e.g., Yard A).
 
-## KPIs
+Risk Level: Dynamic conditional formatting card displaying operational threat levels (e.g., CRITICAL).
 
-- Projected Throughput
-- Crane Risk Score
-- High-Risk Areas
-- Recommended Actions
+Available Capacity: Real-time calculation of remaining yard space (e.g., 3.70%).
 
-## Decision Intelligence Components
+Yard Utilization: Live occupancy tracking (e.g., 96.3%), signaling severe capacity saturation.
 
-### Bottleneck Detection
+🚨 Operational Intelligence & Action Framework
+1. Operational Status and Alert (Left Box)
+Real-Time Automated Alert:
 
-Identifies operational areas requiring attention, including:
+🚨 CRITICAL ALERT: Yard A has reached 96.3% occupancy. Immediate operational attention required! Divert incoming cargo immediately.
 
-- High yard utilization
-- Projected throughput pressure
-- High crane risk score
+Purpose: Instantly flags high-risk congestion zones, eliminating the need to manually parse through raw tables or charts.
 
-### Risk Classification
+2. Action Plan & Recommended Actions (Right Box)
+Prescriptive Strategic Interventions:
 
-Operational conditions are categorized as:
+Prioritize long-stay container clearance to free up high-density block spaces.
 
-- Optimal
-- High Risk
+Redirect upcoming inbound containers to alternative facilities (e.g., Yard D or B).
 
-### Recommended Actions
+Continuously monitor capacity thresholds using automated threshold alerts.
 
-Examples include:
+❓ Business Questions Solved by Page 4
+What is the current operational risk level and capacity status for a selected yard/port?
 
-- Prioritize high-risk yards.
-- Improve yard capacity planning.
-- Monitor crane performance.
-- Prioritize operational bottlenecks.
+Which specific yards are facing critical bottleneck conditions or severe saturation (>90% utilization)?
 
----
+What automated operational status alerts should be triggered for port supervisors?
 
-# Key KPIs
-
-| KPI                            | Business Purpose                                      |
-| ------------------------------ | ----------------------------------------------------- |
-| **Total Container Movements**  | Measures overall container throughput                 |
-| **Average Dwell Days**         | Measures how long containers remain within operations |
-| **Yard Utilization %**         | Measures available yard capacity and congestion       |
-| **Crane Downtime Hours**       | Measures equipment availability problems              |
-| **Average Truck Wait Minutes** | Measures gate congestion and truck delays             |
-| **Crane Utilization %**        | Measures equipment utilization                        |
-| **Long-Stay Containers**       | Identifies containers requiring operational attention |
-| **Operational Risk Score**     | Summarizes major operational risk conditions          |
-
----
-
-# Key Business Insights
+What concrete, prioritized mitigation actions and cargo-diversion strategies must management execute next?# Key Business Insights
 
 The dashboard is designed to identify:
 
@@ -705,19 +686,20 @@ PortPulse-Analytics/
 
 ## 1. Page 1 — Executive Overview
 
-Add the actual Power BI Executive Overview screenshot here.
+<img width="942" height="540" alt="executive overview" src="https://github.com/user-attachments/assets/84ba9b5b-68ae-412d-8f81-592d235b4e16" />
+
 
 ## 2. Page 2 — Container & Yard Intelligence
 
-Add the actual Container & Yard Intelligence screenshot here.
+<img width="942" height="540" alt="container and yard intelligence" src="https://github.com/user-attachments/assets/9eeb50c5-7508-4311-bee0-d29938e95b00" />
 
 ## 3. Page 3 — Crane & Truck Operations
 
-Add the actual Crane & Truck Operations screenshot here.
+<img width="942" height="540" alt="crane and truck operations" src="https://github.com/user-attachments/assets/d3861c4a-7a84-4f6f-8300-e54cb494169d" />
 
 ## 4. Page 4 — Decision Intelligence
+<img width="942" height="540" alt="Decision Intelligence" src="https://github.com/user-attachments/assets/e8b417f2-1c08-46a6-8ad0-08cd75bec286" />
 
-Add the actual Decision Intelligence screenshot here.
 
 ---
 
@@ -777,15 +759,15 @@ Navigate through:
 
 Based on the operational analysis, the platform can support recommendations such as:
 
-- Prioritize high-utilization yards before capacity becomes critical.
-- Investigate containers with excessive dwell times.
-- Prioritize long-stay containers for operational clearance.
-- Monitor cranes with high downtime.
-- Schedule preventive maintenance based on operational requirements.
-- Investigate terminals with consistently high truck waiting times.
-- Improve resource allocation during peak operational periods.
-- Monitor high-risk ports and terminals through the Decision Intelligence page.
-- Use operational KPIs to support proactive capacity planning.
+* Prioritize high-utilization yards before capacity becomes critical.
+* Investigate containers with excessive dwell times.
+* Prioritize long-stay containers for operational clearance.
+* Monitor cranes with high downtime.
+* Schedule preventive maintenance based on operational requirements.
+* Investigate terminals with consistently high truck waiting times.
+* Improve resource allocation during peak operational periods.
+* Monitor high-risk ports and terminals through the Decision Intelligence page.
+* Use operational KPIs to support proactive capacity planning.
 
 ---
 
@@ -803,12 +785,12 @@ The solution enables users to understand:
 
 The final dashboard helps organizations:
 
-- Monitor operational performance
-- Identify bottlenecks
-- Understand capacity constraints
-- Analyze operational risks
-- Support proactive planning
-- Take data-driven actions
+* Monitor operational performance
+* Identify bottlenecks
+* Understand capacity constraints
+* Analyze operational risks
+* Support proactive planning
+* Take data-driven actions
 
 ---
 
@@ -816,7 +798,7 @@ The final dashboard helps organizations:
 
 **SWETHA M(AF05303152)**
 
-**Data and Business Analytics with AI,**\
+**Data and Business Analytics with AI,**
 **Anudip Foundation -- Pallavaram, Chennai**
 
 ### Project
@@ -847,11 +829,11 @@ This project is created for **educational, portfolio, and data analytics demonst
 
 This repository contains the:
 
-- SQL scripts
-- Datasets
-- Power BI report
-- Dashboard screenshots
-- Data dictionary
-- Project documentation
+* SQL scripts
+* Datasets
+* Power BI report
+* Dashboard screenshots
+* Data dictionary
+* Project documentation
 
 **PortPulse Analytics demonstrates how operational data can be transformed into business insights and actionable decisions using modern data analytics and business intelligence tools.**
